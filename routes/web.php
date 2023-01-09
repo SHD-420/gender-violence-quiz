@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +22,10 @@ Route::post('/', [AuthController::class, 'login'])->name('login');
 Route::view('/register', 'register')->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::view('/dashboard', 'dashboard')->name('dashboard');
+Route::middleware('auth')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::view('/profile', 'profile')->name('profile');
+    Route::post('/profile', [ProfileController::class, 'update'])->name('profile');
+});
