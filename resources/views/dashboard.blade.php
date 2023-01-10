@@ -6,6 +6,14 @@
         </p>
     @endif
     <div class="w-8/12 rounded-md shadow-xl bg-white mx-auto py-8 px-12">
+        <h2 class="text-gray-600 font-bold text-4xl">
+            Welcome, {{ auth()->user()->name }}
+        </h2>
+        <p class="mb-12">
+            Evalúa y amplía tus conocimientos sobre el tema de “Violencia de Género” en
+            México e informa si has sido víctima o has cometido un acto de violencia sin saberlo con un
+            un par de cuestionarios.
+        </p>
         <img src="https://images.pexels.com/photos/2990644/pexels-photo-2990644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             class="w-full rounded-md shadow-xl h-60 object-cover mb-8">
         <p class="text-sm bg-orange-600 w-max font-semibold px-1 text-gray-100">Definition</p>

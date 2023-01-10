@@ -19,7 +19,7 @@ class KnowledgeQuizController extends Controller
         $user_responses = Auth::user()
             ->responses()
             ->select('question_id', 'value')
-            ->withWhereHas('question', fn ($q) => $q->where('response_type', 'bool')->select('text', 'id'));
+            ->withWhereHas('question', fn ($q) => $q->where('response_type', 'int')->select('text', 'id'));
 
         // if user hasn't responded, send questions else send responses
         if ($user_responses->count() === 0)
