@@ -37,5 +37,26 @@ class QuestionSeeder extends Seeder
                 ->map(fn ($t) => ['text' => $t, 'response_type' => 'bool'])
                 ->toArray()
         );
+        Question::insert(
+            collect([
+                '¿En qué rango, crees saber cuál es la población nacional de mujeres en la actualidad?',
+                '¿Conoces alguna plataforma de transparencia de violencia de genero?',
+                '¿En qué rango, considera haber violentado alguna vez a una mujer?',
+                '¿En qué rango, a alguien que haya sido violentada por ser mujer?',
+                '¿En qué rango, crees que en tu hogar se haya suscitado por lo menos una vez violencia de genero?',
+                '¿En qué rango, crees saber cuál es el estado de la Republica con más índices de violencia de género en los últimos años?',
+                '¿En qué rango, crees saber cuál es el estado de la república con menos índices de violencia de género en los últimos años?',
+                '¿En qué rango, crees que la violencia de genero se presente en Ciudad de México actualmente?',
+                '¿En qué rango, crees conocer los 4 tipos de violencia de género que existen?',
+                '¿En qué rango, crees poder mencionar estos cuatro?',
+                '¿Conoces cuál es el rango de edad de mujeres que sufren algún tipo de violencia de genero?',
+                '¿En qué rango, consideras que la violencia de genero la edad más afectada es de entre 15 y 35 años?',
+                '¿En qué rango, consideras que la violencia de genero es un fenómeno importante para el desarrollo social?',
+                '¿En qué rango, consideras que la violencia de genero se suscita por temas derivados por la clase social?',
+                '¿Consideras conocer plataformas o números de emergencia en donde denunciar algún tipo de violencia de genero?',
+            ])
+                ->map(fn ($t) => ['text' => $t, 'response_type' => 'int'])
+                ->toArray()
+        );
     }
 }

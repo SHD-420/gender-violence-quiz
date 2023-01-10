@@ -57,6 +57,6 @@ class AuthController extends Controller
 
         Auth::login($user, true);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard')->with('success-message', '¡Registración exitosa!');;
     }
 }

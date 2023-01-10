@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Question;
 use App\Models\Response;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,21 +27,18 @@ class ResponseController extends Controller
         $response_objects = [];
         $user_id = Auth::user()->id;
 
-        if ($response_type === "bool") {
-            foreach ($response_collection as $question_id => $response) {
-                array_push($response_objects, [
-                    'question_id' => $question_id,
-                    'value' => $response,
-                    'user_id' => $user_id
-                ]);
-                $unanswered_questions->forget("response[$question_id]");
-            }
-            if ($unanswered_questions->count() > 0) {
-                return back()->withErrors($unanswered_questions->toArray())->withInput($data);
-            }
-            Response::insert($response_objects);
-            User::where('id', $user_id)->update(['has_responded_personal_quiz' => true]);
-            return redirect()->route('dashboard')->with('success-message', '¡Respuesta grabada!');
+        foreach ($response_collection as $question_id => $response) {
+            array_push($response_objects, [
+                'question_id' => $question_id,
+                'value' => $response,
+                'user_id' => $user_id
+            ]);
+            $unanswered_questions->forget("response[$question_id]");
         }
+        if ($unanswered_questions->count() > 0) {
+            return back()->withErrors($unanswered_questions->toArray())->withInput($data);
+        }
+        Response::insert($response_objects);
+        return redirect()->route('dashboard')->with('success-message', '¡Respuesta grabada!');
     }
 }

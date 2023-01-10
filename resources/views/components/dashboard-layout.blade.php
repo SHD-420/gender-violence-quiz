@@ -11,7 +11,7 @@
 
 <body class="bg-gray-200">
     <nav class="grid grid-cols-4 text-purple-800 w-8/12 mx-auto py-4">
-        <a href=""
+        <a href="{{ route('knowledge-quiz') }}"
             class="text-center flex items-center flex-col py-4 px-4 @if (Route::currentRouteName() == 'knowledge-quiz') bg-purple-200 @endif hover:bg-purple-100 hover:shadow-xl hover:shadow-purple-200 rounded-md">
             <x-icons.knowledge></x-icons.knowledge>
             <p>Knowledge quiz</p>

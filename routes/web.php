@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KnowledgeQuizController;
 use App\Http\Controllers\PersonalQuizController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResponseController;
@@ -32,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile', [ProfileController::class, 'update'])->name('profile');
 
     Route::get('/personal', [PersonalQuizController::class, 'show'])->name('personal-quiz');
-    
+    Route::get('/knowledge', [KnowledgeQuizController::class, 'show'])->name('knowledge-quiz');
+
     Route::post('/response', [ResponseController::class, 'store'])->name('response');
 });

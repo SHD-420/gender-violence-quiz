@@ -1,6 +1,6 @@
 <x-dashboard-layout>
     <div class="mt-12"></div>
-    @isset ($responses)
+    @isset($responses)
         <div class="w-8/12 mx-auto p-8 bg-white rounded-md shadow-xl">
             <h4 class="font-semibold text-2xl text-gray-600">Resultados de la encuesta</h4>
             <p class="mb-8">Respondieron un total de {{ $total_responses }} personas, incluyéndote a ti.</p>
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <p>
-                            <span>Your response:</span>
+                            <span>Tu respuesta:</span>
                             <span class="font-semibold">
                                 {{ $response['user_response'] === 0 ? 'No' : 'Si' }}
                             </span>
@@ -51,7 +51,7 @@
                             {{ $item->text }}
                         </p>
                         <div class="flex space-x-8 items-center">
-                            <p>Your response:</p>
+                            <p>Tu respuesta:</p>
                             <div class="flex items-center space-x-2">
                                 <input {{ old("response.$item->id") == '1' ? 'checked' : '' }} type="radio"
                                     name="response[{{ $item->id }}]" value="1" />
