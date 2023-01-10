@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'age',
-        'gender'
+        'gender',
+        'has_responded_personal_quiz',
     ];
 
     /**
@@ -43,4 +44,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function responses()
+    {
+        return $this->hasMany(Response::class);
+    }
 }

@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 class ProfileController extends Controller
 {
     /**
-     * Handle an authentication attempt.
+     * Handle profile update
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -25,6 +25,6 @@ class ProfileController extends Controller
         ]);
 
         Auth::user()->update($creds);
-        return redirect()->route('dashboard')->with('success-message','¡Perfil actualizado con éxito!');
+        return redirect()->route('dashboard')->with('success-message', '¡Perfil actualizado con éxito!');
     }
 }

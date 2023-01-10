@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PersonalQuizController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResponseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::view('/profile', 'profile')->name('profile');
     Route::post('/profile', [ProfileController::class, 'update'])->name('profile');
+
+    Route::get('/personal', [PersonalQuizController::class, 'show'])->name('personal-quiz');
+    
+    Route::post('/response', [ResponseController::class, 'store'])->name('response');
 });
