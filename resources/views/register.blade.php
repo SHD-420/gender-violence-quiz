@@ -1,7 +1,8 @@
 <x-home-layout>
     <div class="py-2 px-12 mx-auto w-1/2 rounded-md bg-white shadow-xl">
         <div class="grid grid-cols-2 gap-x-2">
-            <a href="{{ route('login') }}" class="font-semibold text-center py-2 hover:bg-orange-100 rounded-md">Iniciar Sesión</a>
+            <a href="{{ route('login') }}" class="font-semibold text-center py-2 hover:bg-orange-100 rounded-md">Iniciar
+                Sesión</a>
             <button class="bg-orange-200 py-2 text-orange-600 font-semibold rounded-md">Registro</button>
             <form class="col-span-2 py-8" method="POST" action="{{ route('register') }}">
                 @csrf
@@ -70,7 +71,7 @@
                         type="password" placeholder="Password" />
                 </div>
                 <button type="submit"
-                    class="text-center w-full bg-purple-800 text-white font-semibold py-2 rounded-md hover:bg-purple-700">Entregar</button>
+                    class="text-center w-full bg-purple-800 text-white font-semibold py-2 rounded-md hover:bg-purple-700">Ingresar</button>
             </form>
         </div>
     </div>

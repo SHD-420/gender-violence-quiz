@@ -4,13 +4,11 @@
         @if ($total_score <= 30)
             <div class="mb-4 w-8/12 mx-auto py-8 bg-amber-100 font-semibold text-amber-600 px-12 rounded-md shadow">
                 <h4 class="text-2xl mb-2">
-                    ¡Tu puntuación determinada es demasiado baja!
+                    Tu puntaje fue bajo entra al siguiente link para que puedas mas datos de la violencia de genero
                 </h4>
                 <p>
-                    Le recomendamos encarecidamente que <a href="https://www.inegi.org.mx/tablerosestadisticos/vcmm/#General"
-                        target="_blank" class="text-amber-700 underline">consulte nuestro blog (en
-                        inegi.org.mx/tablerosestadisticos/vcmm/)</a> para
-                    obtener algo de conocimiento sobre el tema.
+                    <a href="https://www.inegi.org.mx/tablerosestadisticos/vcmm/#General" target="_blank"
+                        class="text-amber-700 underline">inegi.org.mx/tablerosestadisticos/vcmm</a>
                 </p>
             </div>
         @endif

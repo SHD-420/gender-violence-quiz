@@ -20,7 +20,7 @@
                 <input class="w-full rounded-md py-2 px-4 bg-gray-100 border-2 focus:ring-2 outline-none mb-8"
                     type="password" name="password" placeholder="Password" />
                 <button type="submit"
-                    class="text-center w-full bg-purple-800 text-white font-semibold py-2 rounded-md hover:bg-purple-700">Entregar</button>
+                    class="text-center w-full bg-purple-800 text-white font-semibold py-2 rounded-md hover:bg-purple-700">Ingresar</button>
             </form>
         </div>
     </div>

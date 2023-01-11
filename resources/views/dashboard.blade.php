@@ -7,7 +7,7 @@
     @endif
     <div class="w-8/12 rounded-md shadow-xl bg-white mx-auto py-8 px-12">
         <h2 class="text-gray-600 font-bold text-4xl">
-            Bienvenid {{ '@' . auth()->user()->name }}
+            Bienvenid@ {{ auth()->user()->name }}
         </h2>
         <p class="mb-8">
             Evalúa y amplía tus conocimientos sobre el tema de “Violencia de Género” en
