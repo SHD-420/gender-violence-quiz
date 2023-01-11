@@ -5,19 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>XMplary Equity MX</title>
+    <title>ATZINTLI</title>
     @vite('resources/css/app.css')
 </head>
 
 <body class="bg-gray-200">
     <div class="grid">
-        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-            class="w-full h-96 object-cover col-start-1 row-start-1">
-        <div class="col-start-1 row-start-1 h-96 bg-gray-800 bg-opacity-25 backdrop-blur">
+        <img src="{{ asset('images/home-bg.jpg') }}" class="w-full h-96 object-cover col-start-1 row-start-1">
+        <div class="col-start-1 row-start-1 h-96 bg-gray-800 bg-opacity-25 backdrop-blur-sm">
         </div>
         <div class="col-start-1 row-start-1 relative">
             <section class="mt-20 mb-12 text-center">
-                <h1 class="text-6xl mx-auto font-bold leading-none text-gray-100 mb-4">XMplary Equity MX</h1>
+                <h1 class="text-6xl mx-auto font-bold leading-none text-gray-100 mb-4">ATZINTLI</h1>
                 <div class="w-60 mx-auto bg-orange-600 h-2"></div>
                 <p class="max-w-xl mx-auto mt-4 font-semibold text-lg text-gray-100">
                     Regístrate para evaluar y ampliar tus conocimientos sobre el tema de la <span
@@ -30,7 +29,8 @@
                 {{ $slot }}
             @endguest
             @auth
-                <div class="w-1/2 mx-auto flex justify-between items-center py-4 px-8 rounded-md bg-white shadow-lg text-gray-600">
+                <div
+                    class="w-1/2 mx-auto flex justify-between items-center py-4 px-8 rounded-md bg-white shadow-lg text-gray-600">
                     <p>
                         <span>Logged in as:</span>
                         <span class="font-semibold ml-2">
@@ -54,4 +54,5 @@
         </div>
     </div>
 </body>
+
 </html>

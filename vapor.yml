@@ -10,7 +10,3 @@ environments:
       - "composer install --no-dev"
       - "php artisan event:cache"
       - "npm ci && npm run build && rm -rf node_modules"
-      - "touch ./database/database.sqlite"
-
-    deploy:
-      - "php artisan migrate --force --seed"
